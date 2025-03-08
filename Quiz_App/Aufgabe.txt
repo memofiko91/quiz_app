@@ -1,0 +1,79 @@
+
+Schreiben Sie eine Konsolenanwendung, die ein Quiz mit mehreren Kategorien darstellt. Beim Start
+kann die Benutzerin aus den folgenden Optionen auswählen:
+a) Mathe-Quiz starten
+b) Allgemeinwissen-Quiz starten
+x) Beenden
+
+Wenn die Benutzerin eine der ersten beiden Optionen auswählt, wird ihr eine Liste von drei Multiple-
+Choice-Fragen aus der jeweiligen Kategorie gestellt. Für jede Frage wird der Fragetext zusammen mit
+den Antwortmöglichkeiten angezeigt, und die Benutzerin wählt eine Antwort aus, indem sie die
+entsprechende Zahl eingibt.
+
+Nachdem alle Fragen der Kategorie beantwortet wurden, wird der Benutzerin angezeigt, wie viele
+Fragen sie richtig beantwortet hat. Anschließend wird sie zurück zur Hauptauswahl geführt, wo sie
+eine andere Kategorie auswählen oder die Anwendung beenden kann.
+
+Die Anwendung validiert die Eingaben der Benutzerin und fordert sie bei ungültigen Eingaben auf, die
+Frage erneut zu beantworten. Fehlerhafte Eingaben wie die Eingabe von Nicht-Zahlen oder einer
+Zahl, die nicht in den Antwortmöglichkeiten vorhanden ist, führen zu einer entsprechenden
+Fehlermeldung, und die Frage wird erneut gestellt.
+
+Aufgabe 1 - 10%
+Implementieren Sie eine Klasse, die eine Frage (eng. Question) repräsentiert. Sie sollte die folgenden
+Eigenschaften enthalten:
+• Eine FrageText-Eigenschaft (eng. QuestionText) für den Fragetext.
+• Eine AntwortMöglichkeiten-Eigenschaft (eng. PossibleAnswers), die eine Sammlung von möglichen Antworten enthält.
+• Eine IndexDerRichtigenAntwort-Eigenschaft (eng. CorrectAnswerIndex), die den Index der richtigen Antwort in der
+  Liste der Antwortmöglichkeiten speichert.
+
+Hinweise:
+• Der IndexDerRichtigenAntwort darf nicht von außerhalb der Klasse sichtbar sein und darf nach der
+  Instanziierung der Klasse nicht mehr verändert werden.
+• Die Eigenschaften FrageText und AntwortMöglichkeiten dürfen ebenfalls nach der Instanziierung der
+  Klasse nicht mehr verändert werden, aber von außerhalb der Klasse lesbar sein.
+• Alle Eigenschaften sollten während der Instanziierung der Klasse initialisiert werden.
+
+Aufgabe 2 - 20%
+Erstellen Sie eine Methode innerhalb der Question-Klasse, die zuerst den Fragetext und dann alle
+möglichen Antworten nummeriert aufgelistet auf der Konsole anzeigt. Dann sollte eine Antwort von
+der Konsole ausgelesen werden. Der Rückgabewert der Methode sollte angeben, ob die Antwort
+richtig oder falsch war. Diese Methode sollte keine Eingabeparameter haben und von außerhalb der Klasse sichtbar sein.
+
+Aufgabe 3 - 20%
+Erstellen Sie eine Klasse, die ein Quiz Kategorie (eng. Category) darstellt. Sie sollte eine Sammlung
+von Fragen (Question Objekte) als Eigenschaft enthalten. Diese Sammlung sollte nur innerhalb der
+Klasse oder deren Unterklassen sichtbar sein.
+
+Erstellen Sie zwei von Kategorie abgeleitete Unterklassen:
+• MatheKategorie (eng. MathCategory)
+• AllgemeinwissenKategorie (eng. GeneralKnowledgeCategory)
+
+Jede Unterklasse sollte bei der Instanziierung der Sammlung drei spezifische Question-Objekte
+hinzufügen. Stellen Sie sicher, dass nur die Unterklassen instanziiert werden dürfen.
+
+Aufgabe 4 - 15%
+Implementieren Sie eine Methode in der Kategorie-Klasse, die durch die Sammlung von Fragen
+iteriert und die in Aufgabe 2 erstellte Methode für jede Frage aufruft. Die Methode sollte die Anzahl
+der richtig beantworteten Fragen verfolgen. Nachdem alle Fragen gestellt wurden, anzeigen, wie
+viele richtig beantwortet wurden. Die Methode muss von außerhalb der Klasse sichtbar sein und
+keine Eingabeparameter haben.
+
+Aufgabe 5 - 15%
+Im Hauptprogramm (eng. Main method) sollten die beiden Quizkategorien instanziiert werden.
+Zeigen Sie ein Menü in der Konsole mit den folgenden Optionen an:
+a) Mathe-Quiz starten
+b) Allgemeinwissen-Quiz starten
+x) Beenden
+
+Wenn die Benutzerin die Option „a“ oder „b“ auswählt, verwenden Sie die Methode aus Aufgabe 4,
+um die Fragen aus der gewählten Kategorie zu stellen. Bei ungültiger Eingabe soll das Hauptmenü
+erneut angezeigt werden. Wiederholen Sie das Menü, bis die Benutzerin „x“ wählt, um das Programm zu beenden.
+
+Aufgabe 6 - 15%
+Bearbeiten Sie die Methode aus Aufgabe 2, um sicherzustellen, dass eine Exception ausgelöst wird,
+wenn die Benutzerin etwas anderes als eine Zahl eingibt, sowie eine weitere Exception, wenn die
+eingegebene Zahl nicht in der Liste der möglichen Antworten vorhanden ist. Stellen Sie sicher, dass
+die aufrufende Methode (aus Aufgabe 4) diese Exceptions ordnungsgemäß behandelt.
+Die in derAufgabe 4 implementierte Methode sollte die Fragen so lange erneut stellen, bis keine Exception
+mehr ausgelöst wird.
