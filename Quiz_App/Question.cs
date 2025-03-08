@@ -13,34 +13,53 @@ public class Question
     private readonly int correctAnswerIdx;
 
     // Konstruktor initialisiert alle Eigenschaften
-    public Question(string questionText, int correctAnswerIdx)
+    public Question(string questionText, List<string> possibleAnswers, int correctAnswerIdx)
     {
         this.questionText = questionText;
-        this.possibleAnswers = new List<string>();
+        this.possibleAnswers = possibleAnswers;
         this.correctAnswerIdx = correctAnswerIdx;
     }
     
     
     // gibt Frage + Antwortmöglichkeiten aus, ließt Antwort von Konsole ein, checkt diese und gibt true/false zurück
-    public bool askQuestion()
+    public bool askQuestions()
     {
-        Console.WriteLine(questionText);
-        foreach (string answer in possibleAnswers)
-        {
-            Console.WriteLine(possibleAnswers.IndexOf(answer) + ". " + answer);
-        }
         Console.WriteLine();
-        Console.WriteLine("Wähle deine Antwort und gib die Zahl in die Konsole ein.");
-
-        int index = int.Parse(Console.ReadLine());
-
-        if (index != correctAnswerIdx)
+        Console.WriteLine(questionText);
+        for (int i = 0; i < possibleAnswers.Count; i++)
         {
-            return false;
+            Console.WriteLine($"{i}. {possibleAnswers[i]}");
         }
         
-        return true;
+        int index = 0;
+        bool validInput = false;
+        
+        do
+        {
+            try
+            {
+                Console.WriteLine("\nWähle deine Antwort und gib die Zahl in die Konsole ein:");
+                string input = Console.ReadLine().Trim();
+                index = int.Parse(input); // falls Eingabe kein int --> FormatException
+
+                if (index < 0 || index >= possibleAnswers.Count)
+                {
+                    throw new ArgumentOutOfRangeException("Zahl "+ nameof(index), " nicht vorhanden!");
+                }
+
+                validInput = true;
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Fehler: Ungültige Eingabe! Bitte gib eine gültige Zahl ein.");
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                Console.WriteLine($"Fehler: {ex.Message}");
+            }
+        } while (!validInput); // Wiederholen, bis eine gültige Eingabe erfolgt
+
+        return index == correctAnswerIdx;
     }
-
-
+    
 }             

@@ -1,0 +1,15 @@
+/home/mehlwurm/RiderProjects/Quiz_App/Quiz_App/bin/Debug/net9.0/Quiz_App
+/home/mehlwurm/RiderProjects/Quiz_App/Quiz_App/bin/Debug/net9.0/Quiz_App.deps.json
+/home/mehlwurm/RiderProjects/Quiz_App/Quiz_App/bin/Debug/net9.0/Quiz_App.runtimeconfig.json
+/home/mehlwurm/RiderProjects/Quiz_App/Quiz_App/bin/Debug/net9.0/Quiz_App.dll
+/home/mehlwurm/RiderProjects/Quiz_App/Quiz_App/bin/Debug/net9.0/Quiz_App.pdb
+/home/mehlwurm/RiderProjects/Quiz_App/Quiz_App/obj/Debug/net9.0/Quiz_App.GeneratedMSBuildEditorConfig.editorconfig
+/home/mehlwurm/RiderProjects/Quiz_App/Quiz_App/obj/Debug/net9.0/Quiz_App.AssemblyInfoInputs.cache
+/home/mehlwurm/RiderProjects/Quiz_App/Quiz_App/obj/Debug/net9.0/Quiz_App.AssemblyInfo.cs
+/home/mehlwurm/RiderProjects/Quiz_App/Quiz_App/obj/Debug/net9.0/Quiz_App.csproj.CoreCompileInputs.cache
+/home/mehlwurm/RiderProjects/Quiz_App/Quiz_App/obj/Debug/net9.0/Quiz_App.sourcelink.json
+/home/mehlwurm/RiderProjects/Quiz_App/Quiz_App/obj/Debug/net9.0/Quiz_App.dll
+/home/mehlwurm/RiderProjects/Quiz_App/Quiz_App/obj/Debug/net9.0/refint/Quiz_App.dll
+/home/mehlwurm/RiderProjects/Quiz_App/Quiz_App/obj/Debug/net9.0/Quiz_App.pdb
+/home/mehlwurm/RiderProjects/Quiz_App/Quiz_App/obj/Debug/net9.0/Quiz_App.genruntimeconfig.cache
+/home/mehlwurm/RiderProjects/Quiz_App/Quiz_App/obj/Debug/net9.0/ref/Quiz_App.dll
